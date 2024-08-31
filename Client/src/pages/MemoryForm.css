@@ -1,0 +1,182 @@
+.memory-form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .memory-form-container {
+    width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .memory-form-container h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 27px; /* 글자 크기 조정 */
+    font-weight: bold; /* 글자 굵게 */
+    margin-bottom: 40px;
+  }
+  
+  .memory-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* 폼이 컨테이너의 전체 너비를 차지하도록 */
+  }
+  
+  .form-left,
+  .form-right {
+    width: 45%;
+  }
+  
+  .form-left label,
+  .form-right label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-left input,
+  .form-right input,
+  .form-left textarea,
+  .form-right textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Spoqa Han Sans Neo', sans-serif; /* 본문 텍스트 필드와 다른 폰트들의 폰트를 통일 */
+    color: #333; /* 텍스트 색상을 검정색으로 설정 */
+  }
+  
+  .form-left textarea {
+    height: 150px;
+    resize: none; /* 텍스트 필드 사이즈 조절 비활성화 */
+  }
+  
+  input[type="file"] {
+    padding: 5px;
+  }
+  
+  .vertical-line {
+    width: 1px;
+    background-color: #ddd;
+    height: 100%;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .toggle {
+    width: 50px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #ddd;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle.public {
+    background-color: #282828;
+  }
+  
+  .toggle.private {
+    background-color: #8d8d8d;
+  }
+  
+  .toggle::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+  }
+  
+  .toggle.public::before {
+    left: 28px;
+  }
+  
+  .submit-button {
+    width: 400px;
+    padding: 12px;
+    background-color: #282828;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 30px;
+    margin-left: calc(50% - 200px); /* 버튼을 중앙 정렬하기 위한 계산 */
+  }
+  
+  .submit-button:hover {
+    background-color: #555555;
+  }
+  
+  /* 이미지 업로드 섹션 */
+  .image-upload {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로로 배치 */
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .image-upload-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* 제목과 입력 필드 간 간격 설정 */
+  }
+  
+  .image-upload-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* 전체 크기 조정 */
+  }
+  
+  .image-upload-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 5px;
+    height: 42px; /* 높이를 명시적으로 설정 */
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    color: #333; /* 파일명이 검정색으로 표시되도록 설정 */
+    background-color: #ffffff;
+    border-right: none;
+    box-sizing: border-box; /* 패딩과 경계선을 포함한 전체 크기 설정 */
+  }
+  
+  .file-select-button {
+    padding: 10px 20px;
+    margin-top: -12px;
+    margin-right: -20px;
+    height: 42px; /* 입력 필드와 동일한 높이로 설정 */
+    border: 1px solid #282828;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    box-sizing: border-box; /* 패딩과 경계선을 포함한 전체 크기 설정 */
+  }
+  
+  .file-upload-input {
+    display: none;
+  }

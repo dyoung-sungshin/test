@@ -1,0 +1,198 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 40, 40, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 20px; /* 패딩을 줄여서 모달의 내부 공간을 조정 */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px; /* 가로 너비를 적절히 설정 */
+  max-height: 90vh; /* 최대 높이를 화면의 90%로 설정 */
+  overflow: hidden; /* 스크롤을 없애기 위해 overflow를 숨김 */
+  position: relative;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px; /* 위쪽 간격을 줄임 */
+  right: 10px; /* 오른쪽 간격을 줄임 */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 20px; /* 제목 아래의 간격을 줄임 */
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -3%;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-label {
+  margin-bottom: 10px; /* 레이블과 입력 필드 사이의 간격을 줄임 */
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: -3%;
+  color: #282828;
+}
+
+.modal-input,
+.modal-textarea {
+  margin-bottom: 20px; /* 입력 필드 사이의 간격을 줄임 */
+  padding: 10px; /* 내부 패딩을 줄임 */
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-weight: regular;
+  font-size: 16px;
+  letter-spacing: -3%;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #ffffff; /* 텍스트 필드 배경색을 흰색으로 통일 */
+  color: #333333;
+}
+
+.modal-textarea {
+  resize: none;
+  height: 90px; /* 텍스트 영역의 높이를 줄임 */
+}
+
+.modal-input-file {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* 파일 선택 필드와 다른 필드 간의 간격을 줄임 */
+  box-sizing: border-box;
+}
+
+.file-input-text {
+  flex: 1;
+  padding: 10px;
+  margin-right: 5px;
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffffff; /* 파일 입력 텍스트 필드 배경색 흰색으로 설정 */
+  box-sizing: border-box;
+  color: #282828;
+}
+
+.file-button{
+  padding: 10px 10px;
+  height: 42px;
+  margin-bottom: 0px;
+  border: 1px solid #282828;
+  border-radius: 5px !important;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+.file-button:hover {
+  background-color: #f0f0f0;
+}
+
+.modal-public-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* 그룹 공개 선택 필드와 다른 필드 간의 간격을 줄임 */
+}
+
+.toggle-label {
+  margin-right: 12px;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-weight: regular;
+  font-size: 18px;
+  letter-spacing: -3%;
+}
+
+.modal-submit-button {
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #282828;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: -3%;
+  margin-top: 20px; /* 버튼과 위의 필드 간격을 줄임 */
+  transition: background-color 0.3s ease;
+}
+
+.modal-submit-button:hover {
+  background-color: #333333;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #282828;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
