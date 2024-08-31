@@ -1,0 +1,76 @@
+// 게시글 등록
+POST http://localhost:3000/api/groups/3/posts
+Content-Type: application/json
+
+{
+  "nickname": "string",
+	"title": "string",
+	"content": "string",
+	"postPassword": "string",
+	"groupPassword": "string",
+	"imageUrl": "string",
+	"tags": [ "string", "string" ],
+	"location": "string",
+	"moment": "2024-02-21",
+	"isPublic": true
+}
+
+###
+
+// 게시글 목록 조회
+GET http://localhost:3000/api/groups/3/posts?page=1&pageSize=10&sortBy=latest&keyword=s&isPublic=true&groupId=1
+
+###
+
+// 게시글 수정
+PUT http://localhost:3000/api/posts/4
+Content-Type: application/json
+
+{
+  "nickname": "string",
+	"title": "string1",
+	"content": "string",
+	"postPassword": "string",
+	"imageUrl": "string",
+	"tags": [ "string", "string" ],
+	"location": "string",
+	"moment": "2024-02-21",
+	"isPublic": true
+}
+
+###
+
+// 게시글 삭제
+DELETE http://localhost:3000/api/posts/3
+Content-Type: application/json
+
+{
+  "postPassword": "string"
+}
+
+###
+
+// 게시글 상세 정보 조회
+GET http://localhost:3000/api/posts/4
+
+###
+
+// 게시글 조회 권한 확인
+POST http://localhost:3000/api/posts/4/verify-password
+Content-Type: application/json
+
+{
+  "password": "string"
+}
+
+###
+
+// 게시글 공감
+POST http://localhost:3000/api/posts/4/like
+
+###
+
+// 게시글 공개 여부 확인
+GET http://localhost:3000/api/posts/4/is-public
+
+###

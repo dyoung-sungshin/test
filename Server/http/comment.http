@@ -1,0 +1,16 @@
+// 댓글 등록
+POST http://localhost:3000/api/posts/4/comments
+Content-Type: application/json
+
+{
+  "nickname": "string",
+	"content": "string",
+	"password": "string"
+}
+
+###
+
+// 댓글 목록 조회
+GET http://localhost:3000/api/posts/4/comments
+
+###
